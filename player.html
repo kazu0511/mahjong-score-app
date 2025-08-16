@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>プレイヤー詳細</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1 id="playerName"></h1>
+
+<h2>履歴</h2>
+<table border="1">
+  <thead>
+    <tr><th>日付</th><th>スコア</th><th>順位</th></tr>
+  </thead>
+  <tbody id="history"></tbody>
+</table>
+
+<h2>累計</h2>
+<table border="1">
+  <thead>
+    <tr><th>合計スコア</th><th>対局数</th><th>トップ数</th><th>トップ率</th><th>ラス数</th><th>ラス率</th><th>平均順位</th></tr>
+  </thead>
+  <tbody id="stats"></tbody>
+</table>
+
+<h2>スコア推移</h2>
+<canvas id="scoreChart" width="400" height="200"></canvas>
+
+<h2>順位分布</h2>
+<canvas id="rankChart" width="400" height="200"></canvas>
+
+<script src="script.js"></script>
+<script>
+initPlayerPage();
+</script>
+</body>
+</html>

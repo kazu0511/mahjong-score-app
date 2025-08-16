@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>麻雀スコア管理</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>麻雀スコア管理</h1>
+
+<!-- スコア入力フォーム -->
+<h2>新規ゲーム入力</h2>
+<form id="gameForm">
+  <div>
+    <label>日付: <input type="date" id="date" required></label>
+  </div>
+  <div>
+    <label>プレイヤー1: <input type="text" class="player" required> スコア: <input type="number" class="score" required></label>
+  </div>
+  <div>
+    <label>プレイヤー2: <input type="text" class="player" required> スコア: <input type="number" class="score" required></label>
+  </div>
+  <div>
+    <label>プレイヤー3: <input type="text" class="player" required> スコア: <input type="number" class="score" required></label>
+  </div>
+  <div>
+    <label>プレイヤー4: <input type="text" class="player" required> スコア: <input type="number" class="score" required></label>
+  </div>
+  <button type="submit">登録</button>
+</form>
+
+<!-- ゲーム履歴 -->
+<h2>履歴</h2>
+<table border="1" id="historyTable">
+  <thead>
+    <tr><th>日付</th><th>プレイヤー1</th><th>スコア</th><th>プレイヤー2</th><th>スコア</th><th>プレイヤー3</th><th>スコア</th><th>プレイヤー4</th><th>スコア</th></tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<!-- グラフ -->
+<h2>スコア推移</h2>
+<canvas id="scoreChart" width="400" height="200"></canvas>
+
+<h2>順位分布</h2>
+<canvas id="rankChart" width="400" height="200"></canvas>
+
+<script src="script.js"></script>
+<script>
+initTopPage();
+</script>
+</body>
+</html>
